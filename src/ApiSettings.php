@@ -13,4 +13,11 @@ class ApiSettings
             'Accept' => 'application/json',
         ],
     ];
+
+    public static function transportOptionsWithToken(string $token): array
+    {
+        $options = self::TRANSPORT_OPTIONS;
+        $options['headers']['Authorization'] = 'Bearer ' . $token;
+        return $options;
+    }
 }

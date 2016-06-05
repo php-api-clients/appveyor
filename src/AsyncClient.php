@@ -18,8 +18,7 @@ class AsyncClient
         if (!($transport instanceof Transport)) {
             $settings = [
                     'resource_namespace' => 'Async',
-            ] + ApiSettings::TRANSPORT_OPTIONS + $options;
-            $settings['headers']['Authorization'] = 'Bearer ' . $token;
+            ] + ApiSettings::transportOptionsWithToken($token) + $options;
             $transport = Factory::create($loop, $settings);
         }
         $this->transport = $transport;
