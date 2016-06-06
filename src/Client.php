@@ -4,6 +4,8 @@ declare(strict_types=1);
 namespace WyriHaximus\AppVeyor;
 
 use React\EventLoop\Factory as LoopFactory;
+use Rx\React\Promise;
+use WyriHaximus\ApiClient\Resource\CallAsyncTrait;
 use WyriHaximus\AppVeyor\Resource\Sync\Project;
 use WyriHaximus\ApiClient\Transport\Client as Transport;
 use WyriHaximus\ApiClient\Transport\Factory;
@@ -26,6 +28,16 @@ class Client
         }
         $this->transport = $transport;
         $this->client = new AsyncClient($loop, $token, $options, $this->transport);
+    }
+
+    public function projects(): array
+    {
+        return await(
+            Promise::fromObservable(
+                $this->client->projects()->toArray()
+            ),
+            $this->transport->getLoop()
+        );
     }
 
     public function project(string $repository): Project
