@@ -5,7 +5,6 @@ namespace WyriHaximus\AppVeyor;
 
 use React\EventLoop\Factory as LoopFactory;
 use Rx\React\Promise;
-use WyriHaximus\ApiClient\Resource\CallAsyncTrait;
 use WyriHaximus\AppVeyor\Resource\Sync\Project;
 use WyriHaximus\ApiClient\Transport\Client as Transport;
 use WyriHaximus\ApiClient\Transport\Factory;
