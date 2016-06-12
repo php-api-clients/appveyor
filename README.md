@@ -14,6 +14,19 @@
 * 100% AppVeyor [API](http://www.appveyor.com/docs/api) support
 * Both synchronous and asynchronous
 
+# ToDo
+
+## Projects
+
+- [X] List
+- [ ] Get Specific
+- [ ] Add
+- [ ] Update
+- [ ] Update YAML Settings
+- [ ] Update Build Number
+- [ ] Delete Cache
+- [ ] Delete
+
 # License
 
 The MIT License (MIT)
