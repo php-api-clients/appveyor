@@ -15,7 +15,7 @@ environment:
 ## Cache composer bits
 cache:
     - c:\tools\php -> appveyor.yml
-    - c:\projects\php-appveyor-client\vendor -> composer.lock
+    #- c:\projects\php-appveyor-client\vendor -> composer.lock
     - '%LOCALAPPDATA%\Composer\files -> composer.lock'
 
 ## Set up environment varriables
