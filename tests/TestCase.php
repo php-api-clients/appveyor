@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace WyriHaximus\Tests\AppVeyor;
+namespace ApiClients\Tests\AppVeyor;
 
 use GeneratedHydrator\Configuration;
 use Phake;
-use WyriHaximus\ApiClient\Transport\Client;
-use WyriHaximus\ApiClient\Transport\Hydrator;
+use ApiClients\Foundation\Transport\Client;
+use ApiClients\Foundation\Transport\Hydrator;
 
 abstract class TestCase extends \PHPUnit_Framework_TestCase
 {

@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace WyriHaximus\Tests\AppVeyor;
+namespace ApiClients\Tests\AppVeyor;
 
-use WyriHaximus\AppVeyor\ApiSettings;
+use ApiClients\AppVeyor\ApiSettings;
 
 class ApiSettingsTest extends TestCase
 {

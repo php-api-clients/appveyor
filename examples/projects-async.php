@@ -3,8 +3,8 @@
 use React\EventLoop\Factory;
 use Rx\Observer\CallbackObserver;
 use Rx\Scheduler\EventLoopScheduler;
-use WyriHaximus\AppVeyor\AsyncClient;
-use WyriHaximus\AppVeyor\Resource\ProjectInterface;
+use ApiClients\AppVeyor\AsyncClient;
+use ApiClients\AppVeyor\Resource\ProjectInterface;
 
 require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor/autoload.php';
 

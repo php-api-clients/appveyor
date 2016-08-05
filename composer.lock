@@ -4,9 +4,68 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b532287db160e1fc6c03db38a835ad5a",
-    "content-hash": "2989c67e22c3705ba1c9eaa991bb6085",
+    "hash": "703f244f66b1262360dd34c579190cd6",
+    "content-hash": "1aa809878671f0d1f2554a7237311b03",
     "packages": [
+        {
+            "name": "api-clients/foundation",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-api-clients/foundation.git",
+                "reference": "7530d3942c3cbea4e7eaccfc060af9256b611227"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-api-clients/foundation/zipball/7530d3942c3cbea4e7eaccfc060af9256b611227",
+                "reference": "7530d3942c3cbea4e7eaccfc060af9256b611227",
+                "shasum": ""
+            },
+            "require": {
+                "clue/block-react": "^1.1",
+                "doctrine/annotations": "^1.2",
+                "guzzlehttp/guzzle": "^6.0",
+                "ocramius/generated-hydrator": "^2.0",
+                "php": "^7.0",
+                "react/cache": "^0.4.1",
+                "react/promise": "^2.2",
+                "reactivex/rxphp": "^1.2",
+                "wyrihaximus/react-guzzle-psr7": "^1.0",
+                "wyrihaximus/ticking-promise": "^1.6"
+            },
+            "require-dev": {
+                "phake/phake": "^2.3",
+                "phpunit/phpunit": "^5.2.3",
+                "squizlabs/php_codesniffer": "^2.6",
+                "vectorface/dunit": "~2.0"
+            },
+            "suggest": {
+                "api-clients/resource-generator": "Easy wireframing of resources",
+                "wyrihaximus/react-cache-filesystem": "Filesystem cache",
+                "wyrihaximus/react-cache-redis": "Redis cache"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ApiClients\\Foundation\\": "src/"
+                },
+                "files": [
+                    "src/bootstrap.php",
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "ceesjank@gmail.com"
+                }
+            ],
+            "time": "2016-08-02 19:33:29"
+        },
         {
             "name": "clue/block-react",
             "version": "v1.1.0",
@@ -54,6 +113,128 @@
                 "synchronous"
             ],
             "time": "2016-03-09 15:10:22"
+        },
+        {
+            "name": "doctrine/annotations",
+            "version": "v1.2.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/annotations.git",
+                "reference": "f25c8aab83e0c3e976fd7d19875f198ccf2f7535"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/f25c8aab83e0c3e976fd7d19875f198ccf2f7535",
+                "reference": "f25c8aab83e0c3e976fd7d19875f198ccf2f7535",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/lexer": "1.*",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "doctrine/cache": "1.*",
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Common\\Annotations\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Docblock Annotations Parser",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "annotations",
+                "docblock",
+                "parser"
+            ],
+            "time": "2015-08-31 12:32:49"
+        },
+        {
+            "name": "doctrine/lexer",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/lexer.git",
+                "reference": "83893c552fd2045dd78aef794c31e694c37c0b8c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/83893c552fd2045dd78aef794c31e694c37c0b8c",
+                "reference": "83893c552fd2045dd78aef794c31e694c37c0b8c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Common\\Lexer\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Base library for a lexer that can be used in Top-Down, Recursive Descent Parsers.",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "lexer",
+                "parser"
+            ],
+            "time": "2014-09-09 13:34:57"
         },
         {
             "name": "evenement/evenement",
@@ -937,58 +1118,6 @@
             "time": "2016-05-18 17:37:13"
         },
         {
-            "name": "wyrihaximus/api-client",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/WyriHaximus/php-api-client.git",
-                "reference": "9342c547a82884850db530af5d31afe644ed94c8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-api-client/zipball/9342c547a82884850db530af5d31afe644ed94c8",
-                "reference": "9342c547a82884850db530af5d31afe644ed94c8",
-                "shasum": ""
-            },
-            "require": {
-                "clue/block-react": "^1.1",
-                "guzzlehttp/guzzle": "^6.0",
-                "ocramius/generated-hydrator": "^2.0",
-                "php": "^7.0",
-                "react/cache": "^0.4.1",
-                "react/promise": "^2.2",
-                "reactivex/rxphp": "^1.2",
-                "wyrihaximus/react-guzzle-psr7": "^1.0",
-                "wyrihaximus/ticking-promise": "^1.6"
-            },
-            "require-dev": {
-                "phake/phake": "^2.3",
-                "phpunit/phpunit": "^5.2.3",
-                "squizlabs/php_codesniffer": "^2.6",
-                "vectorface/dunit": "~2.0"
-            },
-            "suggest": {
-                "wyrihaximus/api-client-resource-generator": "Easy wireframing of resources"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "WyriHaximus\\ApiClient\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Cees-Jan Kiewiet",
-                    "email": "ceesjank@gmail.com"
-                }
-            ],
-            "time": "2016-05-26 21:43:14"
-        },
-        {
             "name": "wyrihaximus/react-guzzle-http-client",
             "version": "3.0.2",
             "source": {
@@ -1236,6 +1365,116 @@
     ],
     "packages-dev": [
         {
+            "name": "api-clients/resource-generator",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-api-clients/resource-generator.git",
+                "reference": "71df8a70d0dc0c3e7b7b19a38578b21be0c60b41"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-api-clients/resource-generator/zipball/71df8a70d0dc0c3e7b7b19a38578b21be0c60b41",
+                "reference": "71df8a70d0dc0c3e7b7b19a38578b21be0c60b41",
+                "shasum": ""
+            },
+            "require": {
+                "api-clients/foundation": "dev-master",
+                "aura/cli": "^2.1",
+                "doctrine/inflector": "^1.1",
+                "friendsofphp/php-cs-fixer": "^1.11",
+                "nikic/php-parser": "^2.1",
+                "php": "^7.0",
+                "symfony/yaml": "^2.8||^3.0"
+            },
+            "require-dev": {
+                "phake/phake": "^2.3",
+                "phpunit/phpunit": "^5.2.3",
+                "squizlabs/php_codesniffer": "^2.6",
+                "vectorface/dunit": "~2.0"
+            },
+            "bin": [
+                "api-client-resource-generator"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ApiClients\\Tools\\ResourceGenerator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "ceesjank@gmail.com"
+                }
+            ],
+            "time": "2016-07-29 16:34:29"
+        },
+        {
+            "name": "aura/cli",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/auraphp/Aura.Cli.git",
+                "reference": "b550cd79beff793ec5feeea248ccd4ba537c8603"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/auraphp/Aura.Cli/zipball/b550cd79beff793ec5feeea248ccd4ba537c8603",
+                "reference": "b550cd79beff793ec5feeea248ccd4ba537c8603",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "aura/di": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "aura": {
+                    "type": "library",
+                    "config": {
+                        "common": "Aura\\Cli\\_Config\\Common"
+                    }
+                },
+                "branch-alias": {
+                    "dev-develop-2": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Aura\\Cli\\": "src/",
+                    "Aura\\Cli\\_Config\\": "config/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Aura.Cli Contributors",
+                    "homepage": "https://github.com/auraphp/Aura.Cli/contributors"
+                }
+            ],
+            "description": "Provides the equivalent of request (Context) and response (Stdio) classes for a command line environment, including Getopt support.",
+            "homepage": "https://github.com/auraphp/Aura.Cli",
+            "keywords": [
+                "cli",
+                "command",
+                "command line",
+                "getopt",
+                "options",
+                "stdio"
+            ],
+            "time": "2015-03-27 17:23:08"
+        },
+        {
             "name": "doctrine/inflector",
             "version": "v1.1.0",
             "source": {
@@ -1355,6 +1594,64 @@
                 "instantiate"
             ],
             "time": "2015-06-14 21:17:01"
+        },
+        {
+            "name": "friendsofphp/php-cs-fixer",
+            "version": "v1.11.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
+                "reference": "41dc93abd2937a85a3889e28765231d574d2bac8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/41dc93abd2937a85a3889e28765231d574d2bac8",
+                "reference": "41dc93abd2937a85a3889e28765231d574d2bac8",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "php": ">=5.3.6",
+                "sebastian/diff": "~1.1",
+                "symfony/console": "~2.3|~3.0",
+                "symfony/event-dispatcher": "~2.1|~3.0",
+                "symfony/filesystem": "~2.1|~3.0",
+                "symfony/finder": "~2.1|~3.0",
+                "symfony/process": "~2.3|~3.0",
+                "symfony/stopwatch": "~2.5|~3.0"
+            },
+            "conflict": {
+                "hhvm": "<3.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.5|^5",
+                "satooshi/php-coveralls": "^0.7.1"
+            },
+            "bin": [
+                "php-cs-fixer"
+            ],
+            "type": "application",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\CS\\": "Symfony/CS/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dariusz Rumiński",
+                    "email": "dariusz.ruminski@gmail.com"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "A tool to automatically fix PHP code style",
+            "time": "2016-07-22 06:46:28"
         },
         {
             "name": "league/climate",
@@ -2635,6 +2932,381 @@
             "time": "2016-05-30 22:24:32"
         },
         {
+            "name": "symfony/console",
+            "version": "v3.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/console.git",
+                "reference": "f9e638e8149e9e41b570ff092f8007c477ef0ce5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/console/zipball/f9e638e8149e9e41b570ff092f8007c477ef0ce5",
+                "reference": "f9e638e8149e9e41b570ff092f8007c477ef0ce5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9",
+                "symfony/polyfill-mbstring": "~1.0"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/event-dispatcher": "~2.8|~3.0",
+                "symfony/process": "~2.8|~3.0"
+            },
+            "suggest": {
+                "psr/log": "For using the console logger",
+                "symfony/event-dispatcher": "",
+                "symfony/process": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Console\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Console Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-07-26 08:04:17"
+        },
+        {
+            "name": "symfony/event-dispatcher",
+            "version": "v3.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/event-dispatcher.git",
+                "reference": "c0c00c80b3a69132c4e55c3e7db32b4a387615e5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/c0c00c80b3a69132c4e55c3e7db32b4a387615e5",
+                "reference": "c0c00c80b3a69132c4e55c3e7db32b4a387615e5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/config": "~2.8|~3.0",
+                "symfony/dependency-injection": "~2.8|~3.0",
+                "symfony/expression-language": "~2.8|~3.0",
+                "symfony/stopwatch": "~2.8|~3.0"
+            },
+            "suggest": {
+                "symfony/dependency-injection": "",
+                "symfony/http-kernel": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\EventDispatcher\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony EventDispatcher Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-07-19 10:45:57"
+        },
+        {
+            "name": "symfony/filesystem",
+            "version": "v3.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/filesystem.git",
+                "reference": "bb29adceb552d202b6416ede373529338136e84f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/bb29adceb552d202b6416ede373529338136e84f",
+                "reference": "bb29adceb552d202b6416ede373529338136e84f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Filesystem\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Filesystem Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-07-20 05:44:26"
+        },
+        {
+            "name": "symfony/finder",
+            "version": "v3.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/finder.git",
+                "reference": "8201978de88a9fa0923e18601bb17f1df9c721e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/8201978de88a9fa0923e18601bb17f1df9c721e7",
+                "reference": "8201978de88a9fa0923e18601bb17f1df9c721e7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Finder\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Finder Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-06-29 05:41:56"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "dff51f72b0706335131b00a7f49606168c582594"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/dff51f72b0706335131b00a7f49606168c582594",
+                "reference": "dff51f72b0706335131b00a7f49606168c582594",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for the Mbstring extension",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "mbstring",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2016-05-18 14:26:46"
+        },
+        {
+            "name": "symfony/process",
+            "version": "v3.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/process.git",
+                "reference": "04c2dfaae4ec56a5c677b0c69fac34637d815758"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/process/zipball/04c2dfaae4ec56a5c677b0c69fac34637d815758",
+                "reference": "04c2dfaae4ec56a5c677b0c69fac34637d815758",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Process\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Process Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-07-28 11:13:48"
+        },
+        {
+            "name": "symfony/stopwatch",
+            "version": "v3.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/stopwatch.git",
+                "reference": "bb42806b12c5f89db4ebf64af6741afe6d8457e1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/bb42806b12c5f89db4ebf64af6741afe6d8457e1",
+                "reference": "bb42806b12c5f89db4ebf64af6741afe6d8457e1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Stopwatch\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Stopwatch Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-06-29 05:41:56"
+        },
+        {
             "name": "symfony/yaml",
             "version": "v3.1.0",
             "source": {
@@ -2735,62 +3407,13 @@
                 "testing"
             ],
             "time": "2015-03-31 19:30:02"
-        },
-        {
-            "name": "wyrihaximus/api-client-resource-generator",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/WyriHaximus/php-api-client-resource-generator.git",
-                "reference": "cd44a915abc5a99622478dc6e33b2f009f56a833"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-api-client-resource-generator/zipball/cd44a915abc5a99622478dc6e33b2f009f56a833",
-                "reference": "cd44a915abc5a99622478dc6e33b2f009f56a833",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/inflector": "^1.1",
-                "league/climate": "^3.2",
-                "nikic/php-parser": "^2.1",
-                "php": "^7.0",
-                "symfony/yaml": "^2.8||^3.0",
-                "wyrihaximus/api-client": "dev-master"
-            },
-            "require-dev": {
-                "phake/phake": "^2.3",
-                "phpunit/phpunit": "^5.2.3",
-                "squizlabs/php_codesniffer": "^2.6",
-                "vectorface/dunit": "~2.0"
-            },
-            "bin": [
-                "api-client-resource-generator"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "WyriHaximus\\ApiClient\\Tools\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Cees-Jan Kiewiet",
-                    "email": "ceesjank@gmail.com"
-                }
-            ],
-            "time": "2016-06-04 15:26:26"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "wyrihaximus/api-client": 20,
-        "wyrihaximus/api-client-resource-generator": 20
+        "api-clients/foundation": 20,
+        "api-clients/resource-generator": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

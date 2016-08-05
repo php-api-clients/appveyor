@@ -1,12 +1,12 @@
 # AppVeyor API Client for PHP 7
 
-[![Linux Build Status](https://travis-ci.org/WyriHaximus/php-appveyor-client.svg?branch=master)](https://appveyor-ci.org/WyriHaximus/php-appveyor-client)
-[![Windows Build status](https://ci.appveyor.com/api/projects/status/2pw9aha809sm5b36?svg=true)](https://ci.appveyor.com/project/WyriHaximus/php-appveyor-client)
-[![Latest Stable Version](https://poser.pugx.org/WyriHaximus/appveyor-client/v/stable.png)](https://packagist.org/packages/WyriHaximus/appveyor-client)
-[![Total Downloads](https://poser.pugx.org/WyriHaximus/appveyor-client/downloads.png)](https://packagist.org/packages/WyriHaximus/appveyor-client)
-[![Code Coverage](https://scrutinizer-ci.com/g/WyriHaximus/php-appveyor-client/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/WyriHaximus/php-appveyor-client/?branch=master)
-[![License](https://poser.pugx.org/WyriHaximus/appveyor-client/license.png)](https://packagist.org/packages/wyrihaximus/appveyor-client)
-[![PHP 7 ready](http://php7ready.timesplinter.ch/WyriHaximus/php-appveyor-client/badge.svg)](https://appveyor-ci.org/WyriHaximus/php-appveyor-client)
+[![Linux Build Status](https://travis-ci.org/php-api-clients/appveyor.svg?branch=master)](https://appveyor-ci.org/php-api-clients/appveyor)
+[![Windows Build status](https://ci.appveyor.com/api/projects/status/te8w27ucqo5263nn?svg=true)](https://ci.appveyor.com/project/php-api-clients/appveyor)
+[![Latest Stable Version](https://poser.pugx.org/api-clients/appveyor/v/stable.png)](https://packagist.org/packages/api-clients/appveyor)
+[![Total Downloads](https://poser.pugx.org/api-clients/appveyor/downloads.png)](https://packagist.org/packages/api-clients/appveyor)
+[![Code Coverage](https://scrutinizer-ci.com/g/php-api-clients/appveyor/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/php-api-clients/appveyor/?branch=master)
+[![License](https://poser.pugx.org/api-clients/appveyor/license.png)](https://packagist.org/packages/api-clients/appveyor)
+[![PHP 7 ready](http://php7ready.timesplinter.ch/php-api-clients/appveyor/badge.svg)](https://appveyor-ci.org/php-api-clients/appveyor)
 
 
 # Goals

@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace WyriHaximus\AppVeyor;
+namespace ApiClients\AppVeyor;
 
 use React\EventLoop\Factory as LoopFactory;
 use Rx\React\Promise;
-use WyriHaximus\AppVeyor\Resource\Sync\Project;
-use WyriHaximus\ApiClient\Transport\Client as Transport;
-use WyriHaximus\ApiClient\Transport\Factory;
+use ApiClients\AppVeyor\Resource\Sync\Project;
+use ApiClients\Foundation\Transport\Client as Transport;
+use ApiClients\Foundation\Transport\Factory;
 use function Clue\React\Block\await;
 use function React\Promise\resolve;
 

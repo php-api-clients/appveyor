@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace WyriHaximus\AppVeyor\Resource;
+namespace ApiClients\AppVeyor\Resource;
 
 use DateTimeInterface;
-use WyriHaximus\ApiClient\Resource\ResourceInterface;
+use ApiClients\Foundation\Resource\ResourceInterface;
 
 /**
  * @link http://www.appveyor.com/docs/api/projects-builds#get-project-last-build

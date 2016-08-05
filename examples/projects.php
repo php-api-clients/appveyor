@@ -1,7 +1,7 @@
 <?php
 
-use WyriHaximus\AppVeyor\Client;
-use WyriHaximus\AppVeyor\Resource\ProjectInterface;
+use ApiClients\AppVeyor\Client;
+use ApiClients\AppVeyor\Resource\ProjectInterface;
 
 require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor/autoload.php';
 

@@ -1,7 +1,7 @@
 <?php
 
 use React\Cache\ArrayCache;
-use WyriHaximus\AppVeyor\Client;
+use ApiClients\AppVeyor\Client;
 
 require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor/autoload.php';
 

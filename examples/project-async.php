@@ -2,8 +2,8 @@
 
 use React\Cache\ArrayCache;
 use React\EventLoop\Factory;
-use WyriHaximus\AppVeyor\AsyncClient;
-use WyriHaximus\AppVeyor\Resource\Project;
+use ApiClients\AppVeyor\AsyncClient;
+use ApiClients\AppVeyor\Resource\Project;
 
 require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor/autoload.php';
 

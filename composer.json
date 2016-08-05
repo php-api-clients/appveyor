@@ -1,5 +1,5 @@
 {
-  "name": "wyrihaximus/appveyor-client",
+  "name": "api-clients/appveyor",
   "license": "MIT",
   "authors": [
     {
@@ -9,23 +9,23 @@
   ],
   "require": {
     "php": "^7.0",
-    "wyrihaximus/api-client": "dev-master"
+    "api-clients/foundation": "dev-master"
   },
   "require-dev": {
     "phpunit/phpunit": "^5.2.3",
     "squizlabs/php_codesniffer": "^2.6",
     "vectorface/dunit": "~2.0",
     "phake/phake": "^2.3",
-    "wyrihaximus/api-client-resource-generator": "dev-master"
+    "api-clients/resource-generator": "dev-master"
   },
   "autoload": {
     "psr-4": {
-      "WyriHaximus\\AppVeyor\\": "src/"
+      "ApiClients\\AppVeyor\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "WyriHaximus\\Tests\\AppVeyor\\": "tests/"
+      "ApiClients\\Tests\\AppVeyor\\": "tests/"
     }
   }
 }
