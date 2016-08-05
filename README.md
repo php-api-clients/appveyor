@@ -1,6 +1,6 @@
 # AppVeyor API Client for PHP 7
 
-[![Linux Build Status](https://travis-ci.org/php-api-clients/appveyor.svg?branch=master)](https://appveyor-ci.org/php-api-clients/appveyor)
+[![Linux Build Status](https://travis-ci.org/php-api-clients/appveyor.svg?branch=master)](https://travis-ci.org/php-api-clients/appveyor)
 [![Windows Build status](https://ci.appveyor.com/api/projects/status/te8w27ucqo5263nn?svg=true)](https://ci.appveyor.com/project/php-api-clients/appveyor)
 [![Latest Stable Version](https://poser.pugx.org/api-clients/appveyor/v/stable.png)](https://packagist.org/packages/api-clients/appveyor)
 [![Total Downloads](https://poser.pugx.org/api-clients/appveyor/downloads.png)](https://packagist.org/packages/api-clients/appveyor)
