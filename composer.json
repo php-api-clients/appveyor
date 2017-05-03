@@ -9,14 +9,20 @@
   ],
   "require": {
     "php": "^7.0",
-    "api-clients/foundation": "dev-master"
+    "api-clients/client-services": "^1.0",
+    "api-clients/foundation": "dev-master",
+    "api-clients/middleware": "^2.0",
+    "api-clients/middleware-bearer-authorization": "^1.0",
+    "api-clients/middleware-http-exceptions": "^1.0",
+    "api-clients/middleware-json": "^1.0",
+    "api-clients/middleware-user-agent": "^1.0",
+    "api-clients/rx": "^2.0",
+    "api-clients/rx-operators": "^2.0"
   },
   "require-dev": {
-    "phpunit/phpunit": "^5.2.3",
-    "squizlabs/php_codesniffer": "^2.6",
-    "vectorface/dunit": "~2.0",
-    "phake/phake": "^2.3",
-    "api-clients/resource-generator": "dev-master"
+    "api-clients/resource-generator": "dev-master",
+    "api-clients/resource-test-utilities": "dev-master",
+    "api-clients/test-utilities": "^3.0.1"
   },
   "autoload": {
     "psr-4": {

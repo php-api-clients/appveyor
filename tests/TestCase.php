@@ -7,8 +7,9 @@ use GeneratedHydrator\Configuration;
 use Phake;
 use ApiClients\Foundation\Transport\Client;
 use ApiClients\Foundation\Transport\Hydrator;
+use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 
-abstract class TestCase extends \PHPUnit_Framework_TestCase
+abstract class TestCase extends PHPUnitTestCase
 {
     /**
      * @var string
