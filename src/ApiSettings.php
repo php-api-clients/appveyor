@@ -57,10 +57,8 @@ final class ApiSettings
             [TransportOptions::DEFAULT_REQUEST_OPTIONS]
             [BearerAuthorizationHeaderMiddleware::class] = [
                 Options::TOKEN => $token,
-            ]
-        ;
+            ];
 
-
-        return $options;
+            return $options;
     }
 }

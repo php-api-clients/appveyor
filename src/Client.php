@@ -34,7 +34,7 @@ class Client
         array $options = []
     ): self {
         $loop = LoopFactory::create();
-        $options = ApiSettings::getOptions($token,$options, 'Sync');
+        $options = ApiSettings::getOptions($token, $options, 'Sync');
         $client = FoundationClientFactory::create($loop, $options);
 
         try {
