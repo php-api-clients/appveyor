@@ -14,7 +14,7 @@
     "api-clients/middleware": "^2.0",
     "api-clients/middleware-bearer-authorization": "^1.0",
     "api-clients/middleware-http-exceptions": "^1.0",
-    "api-clients/middleware-json": "^1.0",
+    "api-clients/middleware-json": "^1.1",
     "api-clients/middleware-user-agent": "^1.0",
     "api-clients/rx": "^2.0",
     "api-clients/rx-operators": "^2.0"
@@ -26,12 +26,20 @@
   },
   "autoload": {
     "psr-4": {
-      "ApiClients\\AppVeyor\\": "src/"
+      "ApiClients\\Client\\AppVeyor\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "ApiClients\\Tests\\AppVeyor\\": "tests/"
+      "ApiClients\\Tests\\Client\\AppVeyor\\": "tests/"
+    }
+  },
+  "extra": {
+    "api-clients": {
+      "command-bus": {
+        "path": "src/CommandBus",
+        "namespace": "ApiClients\\Client\\AppVeyor\\CommandBus"
+      }
     }
   }
 }

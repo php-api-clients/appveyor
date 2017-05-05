@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "82c5b0bd161490e1bff5ec2688027638",
+    "content-hash": "4c948f8bbbf69ceae2d4f98210014e8a",
     "packages": [
         {
             "name": "api-clients/client-services",
@@ -389,16 +389,16 @@
         },
         {
             "name": "api-clients/middleware-json",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/middleware-json.git",
-                "reference": "ad528d6b0a494b5445e10f9d6677c785088acd64"
+                "reference": "98e8f769310a67656766775e229924a1a336b326"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/middleware-json/zipball/ad528d6b0a494b5445e10f9d6677c785088acd64",
-                "reference": "ad528d6b0a494b5445e10f9d6677c785088acd64",
+                "url": "https://api.github.com/repos/php-api-clients/middleware-json/zipball/98e8f769310a67656766775e229924a1a336b326",
+                "reference": "98e8f769310a67656766775e229924a1a336b326",
                 "shasum": ""
             },
             "require": {
@@ -429,7 +429,7 @@
                     "email": "ceesjank@gmail.com"
                 }
             ],
-            "time": "2017-04-16T20:02:21+00:00"
+            "time": "2017-05-04T16:43:11+00:00"
         },
         {
             "name": "api-clients/middleware-user-agent",
@@ -2682,7 +2682,7 @@
                 }
             ],
             "description": "Resource from YAML generation tool",
-            "time": "2017-05-02T15:49:33+00:00"
+            "time": "2017-05-02 15:49:33"
         },
         {
             "name": "api-clients/resource-test-utilities",
@@ -2729,7 +2729,7 @@
                     "email": "ceesjank@gmail.com"
                 }
             ],
-            "time": "2017-04-27T20:45:27+00:00"
+            "time": "2017-04-27 20:45:27"
         },
         {
             "name": "api-clients/test-utilities",
@@ -4347,16 +4347,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "2.8.1",
+            "version": "2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "d7cf0d894e8aa4c73712ee4a331cc1eaa37cdc7d"
+                "reference": "f7dfecbee89d68ab475a6c9e17d22bc9b69aed97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/d7cf0d894e8aa4c73712ee4a331cc1eaa37cdc7d",
-                "reference": "d7cf0d894e8aa4c73712ee4a331cc1eaa37cdc7d",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/f7dfecbee89d68ab475a6c9e17d22bc9b69aed97",
+                "reference": "f7dfecbee89d68ab475a6c9e17d22bc9b69aed97",
                 "shasum": ""
             },
             "require": {
@@ -4421,7 +4421,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2017-03-01T22:17:45+00:00"
+            "time": "2017-05-03T23:30:39+00:00"
         },
         {
             "name": "symfony/console",

@@ -1,0 +1,22 @@
+class: Project
+properties:
+  projectId: int
+  accountId: int
+  accountName: int
+  builds: array
+  name: string
+  slug: string
+  repositoryType: string
+  repositoryScm: string
+  repositoryName: string
+  repositoryBranch: string
+  isPrivate: bool
+  skipBranchesWithoutAppveyorYml: bool
+  enableSecureVariablesInPullRequests: bool
+  enableDeploymentInPullRequests: bool
+  rollingBuilds: bool
+  alwaysBuildClosedPullRequests: bool
+  nuGetFeed: array
+  securityDescriptor: array
+  created: DateTimeInterface
+  updated: DateTimeInterface

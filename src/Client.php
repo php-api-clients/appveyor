@@ -1,32 +1,62 @@
-<?php
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
-namespace ApiClients\AppVeyor;
+namespace ApiClients\Client\AppVeyor;
 
-use React\EventLoop\Factory as LoopFactory;
-use Rx\React\Promise;
-use ApiClients\AppVeyor\Resource\Sync\Project;
+use ApiClients\Client\AppVeyor\Resource\Sync\Project;
+use ApiClients\Foundation\Factory as FoundationClientFactory;
 use ApiClients\Foundation\Transport\Client as Transport;
 use ApiClients\Foundation\Transport\Factory;
+use React\EventLoop\Factory as LoopFactory;
+use React\EventLoop\LoopInterface;
+use Rx\React\Promise;
 use function Clue\React\Block\await;
-use function React\Promise\resolve;
+use Rx\Scheduler;
 
 class Client
 {
-    protected $transport;
-    protected $client;
+    /**
+     * @var LoopInterface
+     */
+    private $loop;
 
-    public function __construct(string $token, array $options = [], Transport $transport = null)
-    {
+    /**
+     * @var AsyncClient
+     */
+    private $client;
+
+    /**
+     * @param string $token
+     * @param array $options
+     * @return Client
+     */
+    public static function create(
+        string $token,
+        array $options = []
+    ): self {
         $loop = LoopFactory::create();
-        if (!($transport instanceof Transport)) {
-            $settings = [
-                'resource_namespace' => 'Sync',
-            ] + ApiSettings::transportOptionsWithToken($token) + $options;
-            $transport = Factory::create($loop, $settings);
+        $options = ApiSettings::getOptions($token,$options, 'Sync');
+        $client = FoundationClientFactory::create($loop, $options);
+
+        try {
+            Scheduler::setAsyncFactory(function () use ($loop) {
+                return new Scheduler\EventLoopScheduler($loop);
+            });
+        } catch (\Throwable $t) {
         }
-        $this->transport = $transport;
-        $this->client = new AsyncClient($loop, $token, $options, $this->transport);
+
+        $asyncClient = AsyncClient::createFromClient($client);
+
+        return new self($loop, $asyncClient);
+    }
+
+    /**
+     * @param LoopInterface $loop
+     * @param AsyncClient $client
+     */
+    private function __construct(LoopInterface $loop, AsyncClient $client)
+    {
+        $this->loop = $loop;
+        $this->client = $client;
     }
 
     public function projects(): array
@@ -35,7 +65,7 @@ class Client
             Promise::fromObservable(
                 $this->client->projects()->toArray()
             ),
-            $this->transport->getLoop()
+            $this->loop
         );
     }
 
@@ -43,7 +73,7 @@ class Client
     {
         return await(
             $this->client->project($repository),
-            $this->transport->getLoop()
+            $this->loop
         );
     }
 }

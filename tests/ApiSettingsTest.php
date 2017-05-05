@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace ApiClients\Tests\AppVeyor;
+namespace ApiClients\Tests\Client\AppVeyor;
 
-use ApiClients\AppVeyor\ApiSettings;
+use ApiClients\Client\AppVeyor\ApiSettings;
 
 class ApiSettingsTest extends TestCase
 {

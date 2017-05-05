@@ -1,12 +1,13 @@
-<?php
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
-namespace ApiClients\AppVeyor\Resource\Async;
+namespace ApiClients\Client\AppVeyor\Resource\Async;
 
-use Rx\Observable;
-use ApiClients\AppVeyor\Resource\Project as BaseProject;
-use function React\Promise\resolve;
+use ApiClients\Client\AppVeyor\Resource\Project as BaseProject;
 
 class Project extends BaseProject
 {
+    public function refresh() : Project
+    {
+        throw new \Exception('TODO: create refresh method!');
+    }
 }

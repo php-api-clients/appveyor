@@ -1,47 +1,76 @@
-<?php
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
-namespace ApiClients\AppVeyor;
+namespace ApiClients\Client\AppVeyor;
 
+use ApiClients\Client\AppVeyor\CommandBus\Command\ProjectCommand;
+use ApiClients\Client\AppVeyor\CommandBus\Command\ProjectsCommand;
+use ApiClients\Foundation\ClientInterface;
+use ApiClients\Foundation\Factory;
 use React\EventLoop\LoopInterface;
 use React\Promise\PromiseInterface;
 use Rx\Observable;
 use Rx\ObservableInterface;
 use Rx\React\Promise;
-use ApiClients\Foundation\Transport\Client as Transport;
-use ApiClients\Foundation\Transport\Factory;
+use function ApiClients\Tools\Rx\unwrapObservableFromPromise;
 use function React\Promise\resolve;
+use Rx\Scheduler;
 
 class AsyncClient
 {
-    protected $transport;
+    /**
+     * @var ClientInterface
+     */
+    private $client;
 
-    public function __construct(LoopInterface $loop, string $token, array $options = [], Transport $transport = null)
-    {
-        if (!($transport instanceof Transport)) {
-            $settings = [
-                    'resource_namespace' => 'Async',
-            ] + ApiSettings::transportOptionsWithToken($token) + $options;
-            $transport = Factory::create($loop, $settings);
+    /**
+     * @param LoopInterface $loop
+     * @param string $token
+     * @param array $options
+     * @return AsyncClient
+     */
+    public static function create(
+        LoopInterface $loop,
+        string $token,
+        array $options = []
+    ): self {
+        $options = ApiSettings::getOptions($token, $options, 'Async');
+        $client = Factory::create($loop, $options);
+
+        try {
+            Scheduler::setAsyncFactory(function () use ($loop) {
+                return new Scheduler\EventLoopScheduler($loop);
+            });
+        } catch (\Throwable $t) {
         }
-        $this->transport = $transport;
+
+        return new self($client);
+    }
+
+    /**
+     * @internal
+     * @param ClientInterface $client
+     * @return AsyncClient
+     */
+    public static function createFromClient(ClientInterface $client): self
+    {
+        return new self($client);
+    }
+
+    /**
+     * @param ClientInterface $client
+     */
+    private function __construct(ClientInterface $client)
+    {
+        $this->client = $client;
     }
 
     public function projects(): ObservableInterface
     {
-        return Promise::toObservable(
-            $this->transport->request('projects')
-        )->flatMap(function ($response) {
-            return Observable::fromArray($response);
-        })->map(function ($project) {
-            return $this->transport->getHydrator()->hydrate('Project', $project);
-        });
+        return unwrapObservableFromPromise($this->client->handle(new ProjectsCommand()));
     }
 
     public function project(string $repository): PromiseInterface
     {
-        return $this->transport->request('projects/' . $repository)->then(function ($json) {
-            return resolve($this->transport->getHydrator()->hydrate('Project', $json['project']));
-        });
+        return $this->client->handle(new ProjectCommand($repository));
     }
 }
