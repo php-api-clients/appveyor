@@ -2,12 +2,11 @@
 
 namespace ApiClients\Client\AppVeyor;
 
-use ApiClients\Client\Github\Middleware\RateLimitStateMiddleware;
 use ApiClients\Foundation\Hydrator\Options as HydratorOptions;
 use ApiClients\Foundation\Options as FoundationOptions;
 use ApiClients\Foundation\Transport\Options as TransportOptions;
 use ApiClients\Middleware\BearerAuthorization\BearerAuthorizationHeaderMiddleware;
-use ApiClients\Middleware\BearerAuthorization\Options;
+use ApiClients\Middleware\BearerAuthorization\Options as BearerAuthorizationOptions;
 use ApiClients\Middleware\HttpExceptions\HttpExceptionsMiddleware;
 use ApiClients\Middleware\Json\AcceptJsonMiddleware;
 use ApiClients\Middleware\Json\JsonDecodeMiddleware;
@@ -56,7 +55,7 @@ final class ApiSettings
         $options[FoundationOptions::TRANSPORT_OPTIONS]
             [TransportOptions::DEFAULT_REQUEST_OPTIONS]
             [BearerAuthorizationHeaderMiddleware::class] = [
-                Options::TOKEN => $token,
+                BearerAuthorizationOptions::TOKEN => $token,
             ];
 
             return $options;
