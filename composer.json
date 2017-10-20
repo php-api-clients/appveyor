@@ -1,5 +1,6 @@
 {
   "name": "api-clients/appveyor",
+  "description": "Async first AppVeyor client",
   "license": "MIT",
   "authors": [
     {
