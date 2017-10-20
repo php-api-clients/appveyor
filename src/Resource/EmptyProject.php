@@ -10,7 +10,7 @@ abstract class EmptyProject implements ProjectInterface, EmptyResourceInterface
     /**
      * @return int
      */
-    public function projectId() : int
+    public function projectId(): int
     {
         return null;
     }
@@ -18,7 +18,7 @@ abstract class EmptyProject implements ProjectInterface, EmptyResourceInterface
     /**
      * @return int
      */
-    public function accountId() : int
+    public function accountId(): int
     {
         return null;
     }
@@ -26,7 +26,7 @@ abstract class EmptyProject implements ProjectInterface, EmptyResourceInterface
     /**
      * @return int
      */
-    public function accountName() : int
+    public function accountName(): int
     {
         return null;
     }
@@ -34,7 +34,7 @@ abstract class EmptyProject implements ProjectInterface, EmptyResourceInterface
     /**
      * @return array
      */
-    public function builds() : array
+    public function builds(): array
     {
         return null;
     }
@@ -42,7 +42,7 @@ abstract class EmptyProject implements ProjectInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function name() : string
+    public function name(): string
     {
         return null;
     }
@@ -50,7 +50,7 @@ abstract class EmptyProject implements ProjectInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function slug() : string
+    public function slug(): string
     {
         return null;
     }
@@ -58,7 +58,7 @@ abstract class EmptyProject implements ProjectInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function repositoryType() : string
+    public function repositoryType(): string
     {
         return null;
     }
@@ -66,7 +66,7 @@ abstract class EmptyProject implements ProjectInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function repositoryScm() : string
+    public function repositoryScm(): string
     {
         return null;
     }
@@ -74,7 +74,7 @@ abstract class EmptyProject implements ProjectInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function repositoryName() : string
+    public function repositoryName(): string
     {
         return null;
     }
@@ -82,7 +82,7 @@ abstract class EmptyProject implements ProjectInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function repositoryBranch() : string
+    public function repositoryBranch(): string
     {
         return null;
     }
@@ -90,7 +90,7 @@ abstract class EmptyProject implements ProjectInterface, EmptyResourceInterface
     /**
      * @return bool
      */
-    public function isPrivate() : bool
+    public function isPrivate(): bool
     {
         return null;
     }
@@ -98,7 +98,7 @@ abstract class EmptyProject implements ProjectInterface, EmptyResourceInterface
     /**
      * @return bool
      */
-    public function skipBranchesWithoutAppveyorYml() : bool
+    public function skipBranchesWithoutAppveyorYml(): bool
     {
         return null;
     }
@@ -106,7 +106,7 @@ abstract class EmptyProject implements ProjectInterface, EmptyResourceInterface
     /**
      * @return bool
      */
-    public function enableSecureVariablesInPullRequests() : bool
+    public function enableSecureVariablesInPullRequests(): bool
     {
         return null;
     }
@@ -114,7 +114,7 @@ abstract class EmptyProject implements ProjectInterface, EmptyResourceInterface
     /**
      * @return bool
      */
-    public function enableDeploymentInPullRequests() : bool
+    public function enableDeploymentInPullRequests(): bool
     {
         return null;
     }
@@ -122,7 +122,7 @@ abstract class EmptyProject implements ProjectInterface, EmptyResourceInterface
     /**
      * @return bool
      */
-    public function rollingBuilds() : bool
+    public function rollingBuilds(): bool
     {
         return null;
     }
@@ -130,7 +130,7 @@ abstract class EmptyProject implements ProjectInterface, EmptyResourceInterface
     /**
      * @return bool
      */
-    public function alwaysBuildClosedPullRequests() : bool
+    public function alwaysBuildClosedPullRequests(): bool
     {
         return null;
     }
@@ -138,7 +138,7 @@ abstract class EmptyProject implements ProjectInterface, EmptyResourceInterface
     /**
      * @return array
      */
-    public function nuGetFeed() : array
+    public function nuGetFeed(): array
     {
         return null;
     }
@@ -146,7 +146,7 @@ abstract class EmptyProject implements ProjectInterface, EmptyResourceInterface
     /**
      * @return array
      */
-    public function securityDescriptor() : array
+    public function securityDescriptor(): array
     {
         return null;
     }
@@ -154,7 +154,7 @@ abstract class EmptyProject implements ProjectInterface, EmptyResourceInterface
     /**
      * @return DateTimeInterface
      */
-    public function created() : DateTimeInterface
+    public function created(): DateTimeInterface
     {
         return null;
     }
@@ -162,7 +162,7 @@ abstract class EmptyProject implements ProjectInterface, EmptyResourceInterface
     /**
      * @return DateTimeInterface
      */
-    public function updated() : DateTimeInterface
+    public function updated(): DateTimeInterface
     {
         return null;
     }

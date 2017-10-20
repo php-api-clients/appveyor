@@ -58,6 +58,6 @@ final class ApiSettings
                 BearerAuthorizationOptions::TOKEN => $token,
             ];
 
-            return $options;
+        return $options;
     }
 }

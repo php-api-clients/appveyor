@@ -4,13 +4,11 @@ namespace ApiClients\Client\AppVeyor;
 
 use ApiClients\Client\AppVeyor\Resource\Sync\Project;
 use ApiClients\Foundation\Factory as FoundationClientFactory;
-use ApiClients\Foundation\Transport\Client as Transport;
-use ApiClients\Foundation\Transport\Factory;
 use React\EventLoop\Factory as LoopFactory;
 use React\EventLoop\LoopInterface;
 use Rx\React\Promise;
-use function Clue\React\Block\await;
 use Rx\Scheduler;
+use function Clue\React\Block\await;
 
 class Client
 {
@@ -25,8 +23,18 @@ class Client
     private $client;
 
     /**
-     * @param string $token
-     * @param array $options
+     * @param LoopInterface $loop
+     * @param AsyncClient   $client
+     */
+    private function __construct(LoopInterface $loop, AsyncClient $client)
+    {
+        $this->loop = $loop;
+        $this->client = $client;
+    }
+
+    /**
+     * @param  string $token
+     * @param  array  $options
      * @return Client
      */
     public static function create(
@@ -47,16 +55,6 @@ class Client
         $asyncClient = AsyncClient::createFromClient($client);
 
         return new self($loop, $asyncClient);
-    }
-
-    /**
-     * @param LoopInterface $loop
-     * @param AsyncClient $client
-     */
-    private function __construct(LoopInterface $loop, AsyncClient $client)
-    {
-        $this->loop = $loop;
-        $this->client = $client;
     }
 
     public function projects(): array

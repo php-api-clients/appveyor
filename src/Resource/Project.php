@@ -114,7 +114,7 @@ abstract class Project extends AbstractResource implements ProjectInterface
     /**
      * @return int
      */
-    public function projectId() : int
+    public function projectId(): int
     {
         return $this->projectId;
     }
@@ -122,7 +122,7 @@ abstract class Project extends AbstractResource implements ProjectInterface
     /**
      * @return int
      */
-    public function accountId() : int
+    public function accountId(): int
     {
         return $this->accountId;
     }
@@ -130,7 +130,7 @@ abstract class Project extends AbstractResource implements ProjectInterface
     /**
      * @return int
      */
-    public function accountName() : int
+    public function accountName(): int
     {
         return $this->accountName;
     }
@@ -138,7 +138,7 @@ abstract class Project extends AbstractResource implements ProjectInterface
     /**
      * @return array
      */
-    public function builds() : array
+    public function builds(): array
     {
         return $this->builds;
     }
@@ -146,7 +146,7 @@ abstract class Project extends AbstractResource implements ProjectInterface
     /**
      * @return string
      */
-    public function name() : string
+    public function name(): string
     {
         return $this->name;
     }
@@ -154,7 +154,7 @@ abstract class Project extends AbstractResource implements ProjectInterface
     /**
      * @return string
      */
-    public function slug() : string
+    public function slug(): string
     {
         return $this->slug;
     }
@@ -162,7 +162,7 @@ abstract class Project extends AbstractResource implements ProjectInterface
     /**
      * @return string
      */
-    public function repositoryType() : string
+    public function repositoryType(): string
     {
         return $this->repositoryType;
     }
@@ -170,7 +170,7 @@ abstract class Project extends AbstractResource implements ProjectInterface
     /**
      * @return string
      */
-    public function repositoryScm() : string
+    public function repositoryScm(): string
     {
         return $this->repositoryScm;
     }
@@ -178,7 +178,7 @@ abstract class Project extends AbstractResource implements ProjectInterface
     /**
      * @return string
      */
-    public function repositoryName() : string
+    public function repositoryName(): string
     {
         return $this->repositoryName;
     }
@@ -186,7 +186,7 @@ abstract class Project extends AbstractResource implements ProjectInterface
     /**
      * @return string
      */
-    public function repositoryBranch() : string
+    public function repositoryBranch(): string
     {
         return $this->repositoryBranch;
     }
@@ -194,7 +194,7 @@ abstract class Project extends AbstractResource implements ProjectInterface
     /**
      * @return bool
      */
-    public function isPrivate() : bool
+    public function isPrivate(): bool
     {
         return $this->isPrivate;
     }
@@ -202,7 +202,7 @@ abstract class Project extends AbstractResource implements ProjectInterface
     /**
      * @return bool
      */
-    public function skipBranchesWithoutAppveyorYml() : bool
+    public function skipBranchesWithoutAppveyorYml(): bool
     {
         return $this->skipBranchesWithoutAppveyorYml;
     }
@@ -210,7 +210,7 @@ abstract class Project extends AbstractResource implements ProjectInterface
     /**
      * @return bool
      */
-    public function enableSecureVariablesInPullRequests() : bool
+    public function enableSecureVariablesInPullRequests(): bool
     {
         return $this->enableSecureVariablesInPullRequests;
     }
@@ -218,7 +218,7 @@ abstract class Project extends AbstractResource implements ProjectInterface
     /**
      * @return bool
      */
-    public function enableDeploymentInPullRequests() : bool
+    public function enableDeploymentInPullRequests(): bool
     {
         return $this->enableDeploymentInPullRequests;
     }
@@ -226,7 +226,7 @@ abstract class Project extends AbstractResource implements ProjectInterface
     /**
      * @return bool
      */
-    public function rollingBuilds() : bool
+    public function rollingBuilds(): bool
     {
         return $this->rollingBuilds;
     }
@@ -234,7 +234,7 @@ abstract class Project extends AbstractResource implements ProjectInterface
     /**
      * @return bool
      */
-    public function alwaysBuildClosedPullRequests() : bool
+    public function alwaysBuildClosedPullRequests(): bool
     {
         return $this->alwaysBuildClosedPullRequests;
     }
@@ -242,7 +242,7 @@ abstract class Project extends AbstractResource implements ProjectInterface
     /**
      * @return array
      */
-    public function nuGetFeed() : array
+    public function nuGetFeed(): array
     {
         return $this->nuGetFeed;
     }
@@ -250,7 +250,7 @@ abstract class Project extends AbstractResource implements ProjectInterface
     /**
      * @return array
      */
-    public function securityDescriptor() : array
+    public function securityDescriptor(): array
     {
         return $this->securityDescriptor;
     }
@@ -258,7 +258,7 @@ abstract class Project extends AbstractResource implements ProjectInterface
     /**
      * @return DateTimeInterface
      */
-    public function created() : DateTimeInterface
+    public function created(): DateTimeInterface
     {
         return $this->created;
     }
@@ -266,7 +266,7 @@ abstract class Project extends AbstractResource implements ProjectInterface
     /**
      * @return DateTimeInterface
      */
-    public function updated() : DateTimeInterface
+    public function updated(): DateTimeInterface
     {
         return $this->updated;
     }

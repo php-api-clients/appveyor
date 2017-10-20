@@ -1,7 +1,5 @@
-<?php
-
+<?php declare(strict_types=1);
 use ApiClients\Client\AppVeyor\Client;
-use ApiClients\Client\AppVeyor\Resource\ProjectInterface;
 use function ApiClients\Foundation\resource_pretty_print;
 
 require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor/autoload.php';

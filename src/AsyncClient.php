@@ -8,12 +8,9 @@ use ApiClients\Foundation\ClientInterface;
 use ApiClients\Foundation\Factory;
 use React\EventLoop\LoopInterface;
 use React\Promise\PromiseInterface;
-use Rx\Observable;
 use Rx\ObservableInterface;
-use Rx\React\Promise;
-use function ApiClients\Tools\Rx\unwrapObservableFromPromise;
-use function React\Promise\resolve;
 use Rx\Scheduler;
+use function ApiClients\Tools\Rx\unwrapObservableFromPromise;
 
 class AsyncClient
 {
@@ -23,9 +20,17 @@ class AsyncClient
     private $client;
 
     /**
-     * @param LoopInterface $loop
-     * @param string $token
-     * @param array $options
+     * @param ClientInterface $client
+     */
+    private function __construct(ClientInterface $client)
+    {
+        $this->client = $client;
+    }
+
+    /**
+     * @param  LoopInterface $loop
+     * @param  string        $token
+     * @param  array         $options
      * @return AsyncClient
      */
     public static function create(
@@ -48,20 +53,12 @@ class AsyncClient
 
     /**
      * @internal
-     * @param ClientInterface $client
+     * @param  ClientInterface $client
      * @return AsyncClient
      */
     public static function createFromClient(ClientInterface $client): self
     {
         return new self($client);
-    }
-
-    /**
-     * @param ClientInterface $client
-     */
-    private function __construct(ClientInterface $client)
-    {
-        $this->client = $client;
     }
 
     public function projects(): ObservableInterface

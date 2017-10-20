@@ -24,7 +24,7 @@ final class ProjectHandler
     }
 
     /**
-     * @param ProjectCommand $command
+     * @param  ProjectCommand   $command
      * @return PromiseInterface
      */
     public function handle(ProjectCommand $command): PromiseInterface
