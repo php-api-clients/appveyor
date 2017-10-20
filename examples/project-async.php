@@ -11,13 +11,13 @@ $loop = Factory::create();
 $client = AsyncClient::create($loop, require 'resolve_key.php');
 
 echo time(), PHP_EOL;
-$client->project($argv[1] ?? 'WyriHaximus/php-appveyor-client')->then(function (Project $project) use ($client, $argv) {
+$client->project($argv[1] ?? 'WyriHaximus/appveyor')->then(function (Project $project) use ($client, $argv) {
     resource_pretty_print($project);
     echo time(), PHP_EOL;
-    $client->project($argv[1] ?? 'WyriHaximus/php-appveyor-client')->then(function (Project $project) {
-        resource_pretty_print($project);
-        echo time(), PHP_EOL;
-    });
+    return $client->project($argv[1] ?? 'WyriHaximus/appveyor');
+})->done(function (Project $project) {
+    resource_pretty_print($project);
+    echo time(), PHP_EOL;
 });
 
 $loop->run();
