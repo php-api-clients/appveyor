@@ -2,11 +2,15 @@
 
 namespace ApiClients\Client\AppVeyor\Resource;
 
+use ApiClients\Foundation\Hydrator\Annotation\Collection;
 use ApiClients\Foundation\Hydrator\Annotation\EmptyResource;
 use ApiClients\Foundation\Resource\AbstractResource;
 use DateTimeInterface;
 
 /**
+ * @Collection(
+ *     builds="Build"
+ * )
  * @EmptyResource("EmptyProject")
  */
 abstract class Project extends AbstractResource implements ProjectInterface

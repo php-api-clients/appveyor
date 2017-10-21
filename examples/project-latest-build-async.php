@@ -1,6 +1,8 @@
 <?php declare(strict_types=1);
+
 use ApiClients\Client\AppVeyor\AsyncClient;
-use ApiClients\Client\AppVeyor\Resource\Project;
+use ApiClients\Client\AppVeyor\Resource\Async\Build;
+use ApiClients\Client\AppVeyor\Resource\Async\Project;
 use React\EventLoop\Factory;
 use function ApiClients\Foundation\resource_pretty_print;
 
@@ -10,15 +12,12 @@ $loop = Factory::create();
 
 $client = AsyncClient::create($loop, require 'resolve_key.php');
 
-echo time(), PHP_EOL;
-$client->project($argv[1] ?? 'WyriHaximus/appveyor')->then(function (Project $project) use ($client, $argv) {
+$client->project($argv[1] ?? 'WyriHaximus/appveyor')->then(function (Project $project) {
     resource_pretty_print($project);
-    echo time(), PHP_EOL;
 
-    return $client->project($argv[1] ?? 'WyriHaximus/appveyor');
-})->done(function (Project $project) {
-    resource_pretty_print($project);
-    echo time(), PHP_EOL;
+    return $project->lastestBuild();
+})->done(function (Build $build) {
+    resource_pretty_print($build, 1, true);
 });
 
 $loop->run();
