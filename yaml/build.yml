@@ -1,0 +1,19 @@
+class: Build
+properties:
+  buildId: int
+  buildNumber: int
+  version: string
+  message: string
+  branch: string
+  commitId: string
+  authorName: string
+  authorUserName: string
+  comitterName: string
+  comitterUserName: string
+  comitted: DateTimeInterface
+  messages: array
+  status: string
+  started: DateTimeInterface
+  finished: DateTimeInterface
+  created: DateTimeInterface
+  updated: DateTimeInterface

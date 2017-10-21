@@ -3,7 +3,10 @@ properties:
   projectId: int
   accountId: int
   accountName: int
-  builds: array
+  builds:
+    type: array
+    annotations:
+      collection: Build
   name: string
   slug: string
   repositoryType: string
