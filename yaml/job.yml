@@ -1,0 +1,18 @@
+class: Job
+properties:
+  jobId: int
+  name: string
+  allowFailure: bool
+  messagesCount: int
+  compilationMessagesCount: int
+  compilationErrorsCount: int
+  compilationWarningsCount: int
+  testsCount: int
+  passedTestsCount: int
+  failedTestsCount: int
+  artifactsCount: int
+  status: string
+  started: DateTimeInterface
+  finished: DateTimeInterface
+  created: DateTimeInterface
+  updated: DateTimeInterface
