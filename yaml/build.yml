@@ -1,6 +1,10 @@
 class: Build
 properties:
   buildId: int
+  jobs:
+    type: array
+    annotations:
+      collection: Job
   buildNumber: int
   version: string
   message: string

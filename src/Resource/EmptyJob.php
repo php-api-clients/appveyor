@@ -5,20 +5,28 @@ namespace ApiClients\Client\AppVeyor\Resource;
 use ApiClients\Foundation\Resource\EmptyResourceInterface;
 use DateTimeInterface;
 
-abstract class EmptyBuild implements BuildInterface, EmptyResourceInterface
+abstract class EmptyJob implements JobInterface, EmptyResourceInterface
 {
     /**
      * @return int
      */
-    public function buildId(): int
+    public function jobId(): int
     {
         return null;
     }
 
     /**
-     * @return array
+     * @return string
      */
-    public function jobs(): array
+    public function name(): string
+    {
+        return null;
+    }
+
+    /**
+     * @return bool
+     */
+    public function allowFailure(): bool
     {
         return null;
     }
@@ -26,87 +34,63 @@ abstract class EmptyBuild implements BuildInterface, EmptyResourceInterface
     /**
      * @return int
      */
-    public function buildNumber(): int
+    public function messagesCount(): int
     {
         return null;
     }
 
     /**
-     * @return string
+     * @return int
      */
-    public function version(): string
+    public function compilationMessagesCount(): int
     {
         return null;
     }
 
     /**
-     * @return string
+     * @return int
      */
-    public function message(): string
+    public function compilationErrorsCount(): int
     {
         return null;
     }
 
     /**
-     * @return string
+     * @return int
      */
-    public function branch(): string
+    public function compilationWarningsCount(): int
     {
         return null;
     }
 
     /**
-     * @return string
+     * @return int
      */
-    public function commitId(): string
+    public function testsCount(): int
     {
         return null;
     }
 
     /**
-     * @return string
+     * @return int
      */
-    public function authorName(): string
+    public function passedTestsCount(): int
     {
         return null;
     }
 
     /**
-     * @return string
+     * @return int
      */
-    public function authorUserName(): string
+    public function failedTestsCount(): int
     {
         return null;
     }
 
     /**
-     * @return string
+     * @return int
      */
-    public function comitterName(): string
-    {
-        return null;
-    }
-
-    /**
-     * @return string
-     */
-    public function comitterUserName(): string
-    {
-        return null;
-    }
-
-    /**
-     * @return DateTimeInterface
-     */
-    public function comitted(): DateTimeInterface
-    {
-        return null;
-    }
-
-    /**
-     * @return array
-     */
-    public function messages(): array
+    public function artifactsCount(): int
     {
         return null;
     }

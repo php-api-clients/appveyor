@@ -2,11 +2,15 @@
 
 namespace ApiClients\Client\AppVeyor\Resource;
 
+use ApiClients\Foundation\Hydrator\Annotation\Collection;
 use ApiClients\Foundation\Hydrator\Annotation\EmptyResource;
 use ApiClients\Foundation\Resource\AbstractResource;
 use DateTimeInterface;
 
 /**
+ * @Collection(
+ *     jobs="Job"
+ * )
  * @EmptyResource("EmptyBuild")
  */
 abstract class Build extends AbstractResource implements BuildInterface
@@ -15,6 +19,11 @@ abstract class Build extends AbstractResource implements BuildInterface
      * @var int
      */
     protected $buildId;
+
+    /**
+     * @var array
+     */
+    protected $jobs;
 
     /**
      * @var int
@@ -102,6 +111,14 @@ abstract class Build extends AbstractResource implements BuildInterface
     public function buildId(): int
     {
         return $this->buildId;
+    }
+
+    /**
+     * @return array
+     */
+    public function jobs(): array
+    {
+        return $this->jobs;
     }
 
     /**

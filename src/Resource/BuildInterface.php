@@ -15,6 +15,11 @@ interface BuildInterface extends ResourceInterface
     public function buildId(): int;
 
     /**
+     * @return array
+     */
+    public function jobs(): array;
+
+    /**
      * @return int
      */
     public function buildNumber(): int;
