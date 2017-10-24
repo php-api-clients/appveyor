@@ -50,7 +50,13 @@ final class IteratePagesService
                     $options
                 ));
             })
-            ->do(function (ResponseInterface $response) use ($path, $paths, $collectionIndex, $identifierIndex, $identifierQueryKey) {
+            ->do(function (ResponseInterface $response) use (
+                $path,
+                $paths,
+                $collectionIndex,
+                $identifierIndex,
+                $identifierQueryKey
+            ) {
                 $json = $response->getBody()->getJson();
                 $items = $json;
                 if ($collectionIndex !== '') {
