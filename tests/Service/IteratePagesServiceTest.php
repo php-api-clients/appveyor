@@ -48,7 +48,10 @@ final class IteratePagesServiceTest extends TestCase
         ];
         $secondStream = new JsonStream($secondBody);
         $secondResponse = new Response(200, [], $secondStream);
-        $client->request($secondRequest, Argument::type('array'))->shouldBeCalled()->willReturn(resolve($secondResponse));
+        $client->request(
+            $secondRequest,
+            Argument::type('array')
+        )->shouldBeCalled()->willReturn(resolve($secondResponse));
 
         /**
          * Third request.
