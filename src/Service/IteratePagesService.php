@@ -24,7 +24,7 @@ final class IteratePagesService
     private $scheduler;
 
     /**
-     * @param RequestService $requestService
+     * @param RequestService               $requestService
      * @param AsyncSchedulerInterface|null $scheduler
      */
     public function __construct(RequestService $requestService, AsyncSchedulerInterface $scheduler = null)
@@ -39,8 +39,7 @@ final class IteratePagesService
         string $identifierIndex,
         string $identifierQueryKey,
         array $options = []
-    ): Observable
-    {
+    ): Observable {
         $paths = new Subject();
 
         return Observable::of($path, $this->scheduler)
