@@ -11,7 +11,7 @@ use Rx\Scheduler;
 use Rx\Subject\Subject;
 use function igorw\get_in;
 
-final class IteratePagesService
+class IteratePagesService
 {
     /**
      * @var RequestService
