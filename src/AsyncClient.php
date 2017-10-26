@@ -2,6 +2,7 @@
 
 namespace ApiClients\Client\AppVeyor;
 
+use ApiClients\Client\AppVeyor\CommandBus\Command\AddProjectCommand;
 use ApiClients\Client\AppVeyor\CommandBus\Command\ProjectCommand;
 use ApiClients\Client\AppVeyor\CommandBus\Command\ProjectsCommand;
 use ApiClients\Foundation\ClientInterface;
@@ -69,5 +70,10 @@ class AsyncClient
     public function project(string $repository): PromiseInterface
     {
         return $this->client->handle(new ProjectCommand($repository));
+    }
+
+    public function addProject(string $provider, string $repository): PromiseInterface
+    {
+        return $this->client->handle(new AddProjectCommand($provider, $repository));
     }
 }
