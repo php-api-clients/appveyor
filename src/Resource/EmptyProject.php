@@ -24,9 +24,9 @@ abstract class EmptyProject implements ProjectInterface, EmptyResourceInterface
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function accountName(): int
+    public function accountName(): string
     {
         return null;
     }

@@ -2,7 +2,7 @@ class: Project
 properties:
   projectId: int
   accountId: int
-  accountName: int
+  accountName: string
   builds:
     type: array
     annotations:

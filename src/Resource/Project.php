@@ -26,7 +26,7 @@ abstract class Project extends AbstractResource implements ProjectInterface
     protected $accountId;
 
     /**
-     * @var int
+     * @var string
      */
     protected $accountName;
 
@@ -132,9 +132,9 @@ abstract class Project extends AbstractResource implements ProjectInterface
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function accountName(): int
+    public function accountName(): string
     {
         return $this->accountName;
     }

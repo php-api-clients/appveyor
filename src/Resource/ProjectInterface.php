@@ -20,9 +20,9 @@ interface ProjectInterface extends ResourceInterface
     public function accountId(): int;
 
     /**
-     * @return int
+     * @return string
      */
-    public function accountName(): int;
+    public function accountName(): string;
 
     /**
      * @return array
