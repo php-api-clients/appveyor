@@ -36,7 +36,10 @@ final class AddProjectHandlerTest extends TestCase
         )->shouldBeCalled()->willReturn(resolve(new Response(200, [], new JsonStream(['php-api-clients']))));
 
         $hydrator = $this->prophesize(Hydrator::class);
-        $hydrator->hydrate(ProjectInterface::HYDRATE_CLASS, ['php-api-clients'])->shouldBeCalled()->willReturn($resource);
+        $hydrator->hydrate(
+            ProjectInterface::HYDRATE_CLASS,
+            ['php-api-clients']
+        )->shouldBeCalled()->willReturn($resource);
 
         $handler = new AddProjectHandler($service->reveal(), $hydrator->reveal());
         $result = $this->await($handler->handle($command));
