@@ -57,7 +57,7 @@ class IteratePagesService
                 $identifierIndex,
                 $identifierQueryKey
             ) {
-                $json = $response->getBody()->getJson();
+                $json = $response->getBody()->getParsedContents();
                 $items = $json;
                 if ($collectionIndex !== '') {
                     $items = get_in($json, explode('.', $collectionIndex));
@@ -83,7 +83,7 @@ class IteratePagesService
                 });
             })
             ->map(function (ResponseInterface $response) {
-                return $response->getBody()->getJson();
+                return $response->getBody()->getParsedContents();
             })
         ;
     }

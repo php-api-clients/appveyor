@@ -52,7 +52,7 @@ final class AddProjectHandler
         )->then(function (ResponseInterface $response) {
             return $this->hydrator->hydrate(
                 ProjectInterface::HYDRATE_CLASS,
-                $response->getBody()->getJson()
+                $response->getBody()->getParsedContents()
             );
         });
     }
