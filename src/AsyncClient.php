@@ -15,7 +15,7 @@ use Rx\ObservableInterface;
 use Rx\Scheduler;
 use function ApiClients\Tools\Rx\unwrapObservableFromPromise;
 
-class AsyncClient
+final class AsyncClient implements AsyncClientInterface
 {
     /**
      * @var ClientInterface

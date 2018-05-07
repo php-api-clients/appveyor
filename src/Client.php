@@ -10,7 +10,7 @@ use Rx\React\Promise;
 use Rx\Scheduler;
 use function Clue\React\Block\await;
 
-class Client
+final class Client implements ClientInterface
 {
     /**
      * @var LoopInterface
@@ -18,15 +18,15 @@ class Client
     private $loop;
 
     /**
-     * @var AsyncClient
+     * @var AsyncClientInterface
      */
     private $client;
 
     /**
-     * @param LoopInterface $loop
-     * @param AsyncClient   $client
+     * @param LoopInterface        $loop
+     * @param AsyncClientInterface $client
      */
-    private function __construct(LoopInterface $loop, AsyncClient $client)
+    private function __construct(LoopInterface $loop, AsyncClientInterface $client)
     {
         $this->loop = $loop;
         $this->client = $client;
